@@ -42,3 +42,4 @@ RUN poetry install
 # copy project
 COPY . .
 EXPOSE 8000
+EXPOSE 5432

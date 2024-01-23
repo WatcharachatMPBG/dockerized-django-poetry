@@ -6,10 +6,10 @@
 	"initializeCommand": "echo starting",
 	"waitFor": "onCreateCommand",
 	"updateContentCommand": "",
-	"postCreateCommand": "./.devcontainer/docker-entrypoint.sh",
+	"postCreateCommand": "echo finished",
 	"postAttachCommand": "",
 	"containerEnv": {
-	  "DATABASE_URL": "postgres://postgres:postgres@db/postgres"
+	  "DATABASE_URL": "postgres://cbs_webapp_dev_user:1234@db/cbs_webapp_dev"
 	},
 
 	"customizations": {
@@ -24,5 +24,5 @@
 		"label": "Application"
 	  }
 	},
-	"forwardPorts": [8000]
+	"forwardPorts": [8000,5432]
   }
