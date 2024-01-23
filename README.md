@@ -35,7 +35,7 @@ To deploy this project:
 ```bash
     python mange.py runserver
 ```
-and goint to the specified URL
+and go in to the specified URL
 ```bash
 http://localhost:8000/
 ```
