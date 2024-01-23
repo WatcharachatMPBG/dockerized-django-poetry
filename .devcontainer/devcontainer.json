@@ -1,0 +1,28 @@
+{
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind",
+	"workspaceFolder": "/code",
+	"initializeCommand": "echo starting",
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "",
+	"postCreateCommand": "./.devcontainer/docker-entrypoint.sh",
+	"postAttachCommand": "",
+	"containerEnv": {
+	  "DATABASE_URL": "postgres://postgres:postgres@db/postgres"
+	},
+
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "ms-python.python"
+		]
+	  }
+	},
+	"portsAttributes": {
+	  "8000": {
+		"label": "Application"
+	  }
+	},
+	"forwardPorts": [8000]
+  }
